@@ -1,0 +1,10 @@
+.grid {
+  margin: 0 auto;
+  max-width: 1270px;
+}
+
+.grid-item {
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=index.HASH_REF_032388d8269b41e5fa7e71dda45764df.css.map */

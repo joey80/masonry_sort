@@ -1,0 +1,2 @@
+require('isotope-layout');
+const grid = document.querySelector('.grid');

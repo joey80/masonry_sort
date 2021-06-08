@@ -1,0 +1,40 @@
+.grid {
+  margin: 0 auto;
+  max-width: 1270px;
+}
+
+/* .grid-item,
+.grid-sizer {
+  width: 20%;
+}
+
+.grid-item {
+  float: left;
+  height: 100px;
+  padding: 5px;
+}
+
+.grid-item--width2 {
+  width: 40%;
+}
+.grid-item--height2 {
+  height: 200px;
+}
+
+.grid-content {
+  border: 1px solid black;
+  height: 100%;
+} */
+
+.grid-item {
+  background: 0 0;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: calc(25% - 12px);
+}
+
+.grid-image {
+  height: auto;
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Grid Sorting Demo</title>
+    <link rel="stylesheet" href="/index.HASH_REF_032388d8269b41e5fa7e71dda45764df.css">
+  </head>
+  <body>
+    <div id="app" data-isotope="{ &quot;itemSelector&quot;: &quot;.grid-item&quot;, &quot;masonry&quot;: { &quot;columnWidth&quot;: 200 } }">
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      ...
+    </div>
+    <script src="/index.HASH_REF_0fa2489aa94c8731ee2aee9f3fafb3e2.js"></script>
+  </body>
+</html>

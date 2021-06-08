@@ -1,0 +1,17 @@
+.grid {
+  border: 1px solid black;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.grid-item {
+  background: 0 0;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: calc(25% - 10px);
+}
+
+.grid-image {
+  height: auto;
+  width: 100%;
+}

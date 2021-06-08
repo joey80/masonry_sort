@@ -1,0 +1,10 @@
+var _macy = require('macy');
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _macyDefault = _parcelHelpers.interopDefault(_macy);
+var _isotopeLayout = require('isotope-layout');
+var _isotopeLayoutDefault = _parcelHelpers.interopDefault(_isotopeLayout);
+console.log('testing 123');
+console.log('test', {
+  Macy: _macyDefault.default,
+  isotope: _isotopeLayoutDefault.default
+});
