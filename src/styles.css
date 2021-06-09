@@ -1,3 +1,7 @@
+body {
+  font-family: 'Goudy Old Style', sans-serif;
+}
+
 .grid {
   margin: 0 auto;
   max-width: 1200px;
@@ -13,4 +17,45 @@
 .grid-image {
   height: auto;
   width: 100%;
+}
+
+.grid-header {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.grid-header ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+
+.list-item {
+  list-style-type: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.list-item button {
+  background-color: transparent;
+  border: none;
+}
+
+.list-item button:hover {
+  cursor: pointer;
+}
+
+.list-item:hover .list-text {
+  color: red;
+}
+
+.list-circle {
+  background: purple;
+  border-radius: 50%;
+  height: 60px;
+  margin: 0 auto 30px auto;
+  width: 60px;
+}
+
+.list-text {
 }

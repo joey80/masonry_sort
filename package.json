@@ -14,8 +14,10 @@
   "author": "joey leger",
   "license": "ISC",
   "devDependencies": {
+    "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
-    "parcel": "^2.0.0-beta.2",
+    "parcel": "^2.0.0-nightly.714",
+    "parcel-bundler": "^1.12.5",
     "semantic-release": "^17.4.3"
   },
   "release": {
