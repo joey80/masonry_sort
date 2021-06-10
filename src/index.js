@@ -131,11 +131,13 @@ const buildContent = data
   .map(
     ({ image, name, type }) => `
     <div class='grid-item ${type}'>
+    <a data-fslightbox="gallery" href='${images[image]}'>
       <div class='grid-overlay'>
         <div class='grid-overlay-title'>${name}</div>
         <svg style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 -2.5 24 24" width="20" height="20" preserveAspectRatio="xMinYMin"><path fill='#fff' d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12zm6.32-1.094l3.58 3.58a1 1 0 1 1-1.415 1.413l-3.58-3.58a8 8 0 1 1 1.414-1.414zM9 7h2a1 1 0 0 1 0 2H9v2a1 1 0 0 1-2 0V9H5a1 1 0 1 1 0-2h2V5a1 1 0 1 1 2 0v2z"></path></svg>
       </div>
-      <img class='grid-image' src='${images[image]}' />
+      </a>
+        <img class='grid-image' src='${images[image]}' />
     </div>`
   )
   .join('');
