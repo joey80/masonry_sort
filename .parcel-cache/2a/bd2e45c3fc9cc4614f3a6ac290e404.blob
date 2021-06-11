@@ -1,0 +1,1 @@
+module.exports = require('./bundle-url').getBundleURL() + "portrait.HASH_REF_4f4374530d7f519dc666061c614ee018.jpg"
