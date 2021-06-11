@@ -1,0 +1,10 @@
+if (Glightbox) {
+        const lightbox = Glightbox({
+          touchNavigation: true,
+          loop: true,
+        });
+
+        lightbox.on('open', () => {
+          console.log('you have opened the modal');
+        });
+      }
