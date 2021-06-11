@@ -1,0 +1,1 @@
+module.exports = require('./bundle-url').getBundleURL() + "square2.HASH_REF_5797edffa61fd752446e5daa518463cb.jpg"

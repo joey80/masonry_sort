@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Grid Sorting Demo</title>
+    <link rel="stylesheet" href="/index.HASH_REF_032388d8269b41e5fa7e71dda45764df.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  </head>
+  <body>
+    <img class="image-header" src="/header.HASH_REF_0fc0eb82ca1fa993027193a5ca42b30b.jpg">
+    <div class="wrapper">
+      <div class="content">
+        <h2>Our Portfolio</h2>
+        <p>
+          When you need creative assistance, McClung can provide you with expertise that will
+          enhance your message and reinforce your brand. The best marketing campaigns represent your
+          identity across all platforms and media. Our team of designers will listen to you and
+          produce a fully customized, branded product.
+        </p>
+      </div>
+      <div class="grid-header"></div>
+      <div class="grid"></div>
+    </div>
+    <script src="/index.HASH_REF_0fa2489aa94c8731ee2aee9f3fafb3e2.js"></script>
+  </body>
+</html>

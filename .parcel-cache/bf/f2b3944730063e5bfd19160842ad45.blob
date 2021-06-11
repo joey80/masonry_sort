@@ -1,0 +1,5 @@
+const lightbox = GLightbox();
+      console.log('lightbox', lightbox);
+      lightbox.on('open', () => {
+        console.log('you clicked me');
+      });

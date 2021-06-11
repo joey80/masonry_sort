@@ -1,5 +1,6 @@
 import Isotope from 'isotope-layout';
 import imagesLoaded from 'imagesloaded';
+import Glightbox from 'glightbox';
 import portrait from 'url:~/src/assets/images/portrait.jpg';
 import portrait2 from 'url:~/src/assets/images/portrait2.jpg';
 import square from 'url:~/src/assets/images/square.jpg';
@@ -12,77 +13,83 @@ import square2 from 'url:~/src/assets/images/square2.jpg';
 const grid = document.querySelector('.grid');
 const list = document.querySelector('.grid-header');
 
+const toKebabCase = (string) =>
+  string
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .replace(/[\s_]+/g, '-')
+    .toLowerCase();
+
 const data = [
   {
     name: 'Client One',
     image: portrait,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client one',
     type: 'marketing',
   },
   {
     name: 'Client Two',
     image: square2,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client two',
     type: 'print',
   },
   {
     name: 'Client Three',
     image: square,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client three',
     type: 'mail',
   },
   {
     name: 'Client Four',
     image: portrait,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client four',
     type: 'design',
   },
   {
     name: 'Client Five',
     image: square2,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client five',
     type: 'web',
   },
   {
     name: 'Client Six',
     image: square,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client six',
     type: 'signs',
   },
   {
     name: 'Client Seven',
     image: square,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client seven',
     type: 'promo',
   },
   {
     name: 'Client Eight',
     image: square2,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client eight',
     type: 'marketing',
   },
   {
     name: 'Client Nine',
     image: portrait2,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client nine',
     type: 'print',
   },
   {
     name: 'Client Ten',
     image: square2,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client ten',
     type: 'mail',
   },
   {
     name: 'Client Eleven',
     image: square,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client eleven',
     type: 'design',
   },
   {
     name: 'Client Twelve',
     image: portrait,
-    description: 'A simple description of the work',
+    description: 'A simple description of the work for client twelve',
     type: 'web',
   },
 ];
@@ -124,15 +131,21 @@ const icons = [
 
 const buildContent = data
   .map(
-    ({ image, name, type }) => `
+    ({ description, image, name, type }) => `
     <div class='grid-item ${type}'>
-      <a data-fslightbox="gallery" href='${image}'>
+      <a class="glightbox" data-glightbox="description: .custom-desc-${toKebabCase(
+        name
+      )}; descPosition: right" href='${image}'>
         <div class='grid-overlay'>
           <div class='grid-overlay-title'>${name}</div>
           <svg style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 -2.5 24 24" width="20" height="20" preserveAspectRatio="xMinYMin"><path fill='#fff' d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12zm6.32-1.094l3.58 3.58a1 1 0 1 1-1.415 1.413l-3.58-3.58a8 8 0 1 1 1.414-1.414zM9 7h2a1 1 0 0 1 0 2H9v2a1 1 0 0 1-2 0V9H5a1 1 0 1 1 0-2h2V5a1 1 0 1 1 2 0v2z"></path></svg>
         </div>
       </a>
       <img class='grid-image' src='${image}' />
+      <div class="grid-description glightbox-desc custom-desc-${toKebabCase(name)}">
+        <h2>${name}</h2>
+        <p>${description}</p>
+      </div>
     </div>`
   )
   .join('');
@@ -177,3 +190,16 @@ document.addEventListener('click', (event) => {
 imagesLoaded(grid).on('progress', function () {
   iso.layout();
 });
+
+if (Glightbox) {
+  const lightbox = Glightbox({
+    touchNavigation: true,
+    loop: true,
+  });
+
+  console.log('lightbox', lightbox);
+
+  lightbox.on('open', () => {
+    console.log('you have opened the modal');
+  });
+}
