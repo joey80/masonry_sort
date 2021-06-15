@@ -4,19 +4,33 @@ body {
   overflow-y: scroll;
 }
 
-h2 {
+h2,
+h3 {
   color: #444;
   font-family: 'Montserrat', sans-serif;
-  font-size: 26px;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 1px;
-  padding: 40px 0 10px 0;
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
+}
+
+h2 {
+  font-size: 26px;
+  padding: 40px 0 10px 0;
+}
+
+h3 {
+  font-size: 22px;
 }
 
 .content {
   width: 50%;
+}
+
+.grid {
+  margin-top: 50px;
 }
 
 .grid-description {
@@ -79,7 +93,7 @@ h2 {
 
 .list-item {
   list-style-type: none;
-  text-align: center;
+  position: relative;
 }
 
 .list-button {
@@ -98,7 +112,7 @@ h2 {
 }
 
 .list-button:hover .list-text {
-  border-bottom: 1px solid #31006f;
+  border-bottom: 1px solid;
   transition: all 0.3s ease-in-out;
 }
 
@@ -110,9 +124,10 @@ h2 {
   box-shadow: none;
   color: #fff;
   display: flex;
+  font-size: 50px;
   height: 70px;
   justify-content: center;
-  margin: 0 auto 30px auto;
+  margin: 0 auto;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
   width: 70px;
@@ -120,11 +135,13 @@ h2 {
 
 .list-text {
   border-bottom: 1px solid transparent;
-  color: #31006f;
-  display: inline;
-  font-size: 18px;
-  text-transform: capitalize;
+  display: inline-block;
+  left: 50%;
+  margin-top: 80px;
+  position: absolute;
   text-decoration: none;
+  top: 50%;
+  transform: translate(-50%, -50%);
   transition: all 0.3s ease-in-out;
 }
 
